@@ -1,0 +1,1 @@
+keytool -genkeypair -alias test -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore keystore.p12 -validity 3650 -storepass password -keypass password -dname "CN=localhost, OU=Test, O=Example, L=City, ST=State, C=KR"

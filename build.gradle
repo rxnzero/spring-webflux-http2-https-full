@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.9' 
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(9)
+	}
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+}
+
+dependencies {
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.1'
+    implementation 'org.apache.httpcomponents.core5:httpcore5:5.1.1'
+	implementation 'org.apache.httpcomponents.core5:httpcore5-h2:5.1.1'
+}
