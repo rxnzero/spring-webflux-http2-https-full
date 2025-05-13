@@ -1,3 +1,5 @@
 curl --http2 -X GET https://localhost:8443/hello --insecure -v -i
+curl --http2 -X GET "https://localhost:8443/hello?name=Alice&age=30" -v -i --insecure
 curl --http2 -X POST https://localhost:8443/hello -H "Content-Type: text/plain" --data "hello world" --insecure -v -i
 curl --http2 -X POST https://localhost:8443/hello -H "Content-Type: application/json" -H "Accept: application/json" --data "{\"message\":\"hello json\"}" --insecure
+curl --http2 -X POST https://localhost:8443/hello -H "Content-Type: application/x-www-form-urlencoded" --data "user=admin&role=dev" --insecure -v
